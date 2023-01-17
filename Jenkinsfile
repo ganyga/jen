@@ -18,8 +18,6 @@ pipeline {
     stage('deploy k8s') {
       steps {
         sh '''
-        sudo kubectl delete -f test.yml
-        sleep 10
         sudo kubectl apply -f test.yml
         '''
       }
